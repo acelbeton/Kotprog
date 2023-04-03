@@ -1,4 +1,4 @@
-case class Entity(
+abstract class Entity(
                  id: String,
                  basestats: Effect,
                  currentHP: Int,
@@ -20,4 +20,8 @@ case class Entity(
   def moveTo(position: Position): Entity = ???
 
   def tick: Option[Entity] = ???
+
+  case class Player(name: String, id: String, baseStats: EntityStats, currentHP: Int, position: Position) extends Entity(name, id, baseStats, currentHP, position)
+
+  case class Mob(name: String, id: String, baseStats: EntityStats, currentHP: Int, position: Position) extends Entity(name, id, baseStats, current
 }

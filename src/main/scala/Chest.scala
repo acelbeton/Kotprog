@@ -1,9 +1,7 @@
 
-case class Chest(id: String) extends Item {
+case class Chest(id: String, capacity: Int) {
 
   def isEmpty: Boolean = ???
-
-  def capacity: Int = ???
 
   def apply(i: Int): Option[ItemStack] = ???
 

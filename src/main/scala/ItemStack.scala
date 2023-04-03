@@ -1,4 +1,4 @@
-case class ItemStack(item: Item, stack: Int) {
+case class ItemStack(item: Item, amount: Int) {
 
   def +(that: ItemStack): (ItemStack, Option[ItemStack]) = ???
 
